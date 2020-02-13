@@ -1,0 +1,5 @@
+1. SELECT Ponsel.Merek, COUNT(Ponsel.Model) FROM Ponsel WHERE Ponsel.DualSim = 'Ya';
+
+2. SELECT PahlawanSuper.NamaPahlawan AS NamaPahlawan, PahlawanSuper.NamaAsli AS NamaAsli, Senjata.NamaSenjata AS NamaSenjata, JenisSenjata.JenisSenjata AS JenisSenjata FROM Senjata
+LEFT JOIN (Senjata, JenisSenjata, PahlawanSuper ) ON (Senjata.JenisSenjataID=JenisSenjata.ID AND Senjata.PahlawanSuperID=PahlawanSuper.ID) WHERE JenisSenjata.JenisSenjata="Kapak";
+
